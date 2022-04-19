@@ -10,15 +10,15 @@ function send_email($to_address, $to_name, $subject, $body, $is_body_html = fals
 
     //Set parameters for PHPMaielr object
     $mail->isSMTP();                               // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';                // Set SMTP server
+    $mail->Host = '';                // Set SMTP server
     $mail->SMTPSecure = 'tls';                     // Set encryption type
     $mail->Port = 587;                             // Set TCP port
     $mail->SMTPAuth = true;                        // Enable SMTP authentication
-    $mail->Username = 'myguitarshopmgs@gmail.com'; // Set SMTP username
-    $mail->Password = 'pa5%word';                  // Set SMTP password
+    $mail->Username = ''; // Set SMTP username
+    $mail->Password = '';                  // Set SMTP password
     
     // Set From address, To address, subject, and body
-    $mail->setFrom('myguitarshopmgs@gmail.com', 'My Guitar Shop');
+    $mail->setFrom('', 'My Guitar Shop');
     $mail->addAddress($to_address, $to_name);
     $mail->Subject = $subject;
     $mail->Body = $body;                  // Body with HTML
